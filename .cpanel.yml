@@ -1,4 +1,8 @@
 ---
+prepare:
+    tasks:
+        - npm i
+
 deployment:
     tasks:
         - export DEPLOYPATH=/home3/r98940lagi/public_html/
@@ -6,4 +10,4 @@ deployment:
 
 running:
     tasks:
-        - yarn start
+        - /bin/cp -R build $DEPLOYPATH
